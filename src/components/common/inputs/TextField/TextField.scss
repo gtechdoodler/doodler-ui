@@ -1,0 +1,12 @@
+@import '../../../../assets/vars.scss';
+
+.TextField {
+  background-color: #fff;
+  border: $dim-input-border-width solid $col-neutral-mid;
+  border-radius: $dim-input-border-rad;
+  height: $dim-input-height;
+  
+  &::placeholder {
+    color: #cfcfcf;
+  }
+}

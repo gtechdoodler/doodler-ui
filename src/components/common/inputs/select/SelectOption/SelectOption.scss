@@ -1,0 +1,18 @@
+@import '../../../../../assets/vars.scss';
+
+.SelectItem {
+  align-items: center;
+  border-bottom: $dim-input-border-width solid $col-neutral-mid;
+  cursor: pointer;
+  display: flex;
+  height: $dim-input-height;
+  padding: 0 $pad-input-left;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover:not(&--noSelect) {
+    background-color: #f5f5f5;
+  }
+}

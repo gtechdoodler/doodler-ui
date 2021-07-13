@@ -1,0 +1,32 @@
+.WithLabel {
+  display: inline-flex;
+  line-height: 1.5;
+
+  &__label {
+    display: inline-block;
+    padding-right: 0.5em;
+  }
+
+  &--block {
+    display: block;
+    
+    .WithLabel__label {
+      padding-bottom: 0.5em;
+    }
+  }
+
+  &--inline {
+    display: inline;
+    
+    &.CuiWithLabel--block {
+      display: inline-flex;
+    }
+  }
+
+  &--right {
+    
+    .WithLabel__label {
+      text-align: right;
+    }
+  }
+}

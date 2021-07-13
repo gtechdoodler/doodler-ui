@@ -1,0 +1,17 @@
+.CustomTheme {
+
+  &__select {
+    $theme: rgb(45, 157, 248);
+
+    .Select__input:hover {
+      border-color: $theme;
+    }
+
+    &.Select--expanded {
+
+      .Select__input {
+        border-color: $theme;
+      }
+    }
+  }
+}

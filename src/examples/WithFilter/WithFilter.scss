@@ -1,0 +1,19 @@
+.WithFilter {
+
+  &__select {
+
+    .Select__menu {
+
+      .SelectItem--noSelect {
+        height: auto;
+        padding: 10px;
+
+        .TextField {
+          font-size: 16px;
+          padding: 0 10px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

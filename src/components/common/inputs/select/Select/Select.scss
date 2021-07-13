@@ -1,0 +1,34 @@
+@import '../../../../../assets/vars.scss';
+
+.Select {
+  position: relative;
+
+  &__input {
+    align-items: center;
+    background-color: #fff;
+    border: $dim-input-border-width solid $col-neutral-mid;
+    border-radius: $dim-input-border-rad;
+    cursor: pointer;
+    display: flex;
+    font-weight: bolder;
+    height: $dim-input-height;
+    justify-content: space-between;
+    padding-right: 10px;
+
+    &:hover {
+      border-color: #ccc;
+    }
+  }
+
+  &__selected {
+
+    .SelectItem:hover:not(.SelectItem--noSelect) {
+      background-color: transparent;
+    }
+  }
+
+  &__menu {
+    height: 300px;
+    overflow-y: auto;
+  }
+}
