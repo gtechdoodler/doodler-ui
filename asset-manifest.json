@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/doodler-ui/static/css/main.c9065b24.chunk.css",
+    "main.js": "/doodler-ui/static/js/main.da7c183b.chunk.js",
+    "main.js.map": "/doodler-ui/static/js/main.da7c183b.chunk.js.map",
+    "runtime-main.js": "/doodler-ui/static/js/runtime-main.b5e6d1fa.js",
+    "runtime-main.js.map": "/doodler-ui/static/js/runtime-main.b5e6d1fa.js.map",
+    "static/css/2.f64237b6.chunk.css": "/doodler-ui/static/css/2.f64237b6.chunk.css",
+    "static/js/2.531a3b85.chunk.js": "/doodler-ui/static/js/2.531a3b85.chunk.js",
+    "static/js/2.531a3b85.chunk.js.map": "/doodler-ui/static/js/2.531a3b85.chunk.js.map",
+    "static/js/3.c033ca83.chunk.js": "/doodler-ui/static/js/3.c033ca83.chunk.js",
+    "static/js/3.c033ca83.chunk.js.map": "/doodler-ui/static/js/3.c033ca83.chunk.js.map",
+    "index.html": "/doodler-ui/index.html",
+    "static/css/2.f64237b6.chunk.css.map": "/doodler-ui/static/css/2.f64237b6.chunk.css.map",
+    "static/css/main.c9065b24.chunk.css.map": "/doodler-ui/static/css/main.c9065b24.chunk.css.map",
+    "static/js/2.531a3b85.chunk.js.LICENSE.txt": "/doodler-ui/static/js/2.531a3b85.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/doodler-ui/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b5e6d1fa.js",
+    "static/css/2.f64237b6.chunk.css",
+    "static/js/2.531a3b85.chunk.js",
+    "static/css/main.c9065b24.chunk.css",
+    "static/js/main.da7c183b.chunk.js"
+  ]
+}
