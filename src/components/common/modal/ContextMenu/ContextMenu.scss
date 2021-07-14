@@ -1,7 +1,10 @@
 @import '../../../assets/vars.scss';
 
 .ContextMenu {
-  $menu-z-index: 1;
+  /*
+    z-index values will likely need overriding and managing in a host application.
+  */
+  $menu-z-index: 10;
 
   background-color: #fff;
   border: $dim-input-border-width solid $col-neutral-mid;
