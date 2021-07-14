@@ -1,8 +1,8 @@
-import React, { ReactElement, useEffect, useRef, useState } from 'react';
+import React, { ReactElement, useEffect, useState } from 'react';
 
 import { SelectProps } from './Select.types';
 import BemIt, { addClass } from '@gtechdoodler/bem-it';
-import ContextMenu from '../../../modal/ContextMenu';
+import ContextMenu from '../../modal/ContextMenu';
 import DownArrow from '@material-ui/icons/ArrowDropDown';
 
 import './Select.scss';
@@ -13,6 +13,7 @@ const Select: React.FC<SelectProps> = (props) => {
     className,
     downArrowIcon,
     name,
+    onChange,
     onHideOptions,
     onShowOptions,
     tabIndex,
@@ -29,7 +30,7 @@ const Select: React.FC<SelectProps> = (props) => {
       const child = childrenArray[i];
       if (React.isValidElement(child)) {
         if (child.props.selected) {
-          setSelectedElementStateAndInputField(child);
+          setSelectedStates(child);
           break;
         }
       }
@@ -45,11 +46,18 @@ const Select: React.FC<SelectProps> = (props) => {
     } else if (onHideOptions) {
       onHideOptions();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showOptions]);
 
-  const setSelectedElementStateAndInputField = (element: ReactElement) => {
+  const setSelectedStates = (element: ReactElement) => {
     setSelectedElement(element);
     setSelectedValue(element.props.value);
+  }
+
+  const fireChangeEvent = (element: ReactElement) => {
+    if (onChange) {
+      onChange(element.props.value);
+    }
   }
 
   const handleSelectClick = () => {
@@ -69,8 +77,9 @@ const Select: React.FC<SelectProps> = (props) => {
       for (let i = 0; i < childrenArray.length; i++) {
         const childElement = childrenArray[i] as ReactElement;
         if (childElement.props.value === selectedValue) {
-          setSelectedElementStateAndInputField(childElement);
+          setSelectedStates(childElement);          
           setShowOptions(false);
+          fireChangeEvent(childElement);
           break;
         }
       }

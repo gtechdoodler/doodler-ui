@@ -20,7 +20,7 @@ const WithLabel: React.FC<WithLabelProps> = (props) => {
   return (
     <div className={block.mod({ block: blockProp, inline, right }).out}>
       {
-        (reverse == true) && props.children
+        (reverse === true) && props.children
       }
       <Label
         className={addClass(className).after(block.el('label'))}

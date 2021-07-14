@@ -2,8 +2,8 @@ import React from 'react';
 
 import BemIt from '@gtechdoodler/bem-it';
 import ExampleFieldSet from '../ExampleFieldSet';
-import Select from '../../components/common/inputs/select/Select';
-import Option from '../../components/common/inputs/select/SelectOption';
+import Select from '../../components/common/inputs/Select';
+import Option from '../../components/common/inputs/SelectOption';
 
 import sortedUsers from '../sortedUsers';
 import './CustomTheme.scss';

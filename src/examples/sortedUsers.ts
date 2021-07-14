@@ -1,7 +1,5 @@
 import users from './users.json';
 
-console.log('Sorting users');
-
 users.sort((a, b) => {
   const nameA = a.name.toLowerCase();
   const nameB = b.name.toLowerCase();

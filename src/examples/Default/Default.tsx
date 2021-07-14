@@ -1,11 +1,11 @@
 import React from 'react';
 
 import ExampleFieldSet from '../ExampleFieldSet';
-import Select from '../../components/common/inputs/select/Select';
-import Option from '../../components/common/inputs/select/SelectOption';
-import sortedUsers from '../sortedUsers';
-
+import Select from '../../components/common/inputs/Select';
+import Option from '../../components/common/inputs/SelectOption';
 import WithLabel from '../../components/common/hocs/WithLabel';
+
+import sortedUsers from '../sortedUsers';
 
 const Default: React.FC = () => {
 

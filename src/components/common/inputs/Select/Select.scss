@@ -1,4 +1,4 @@
-@import '../../../../../assets/vars.scss';
+@import '../../../assets/vars.scss';
 
 .Select {
   position: relative;
@@ -28,7 +28,7 @@
   }
 
   &__menu {
-    height: 300px;
+    max-height: 320px;
     overflow-y: auto;
   }
 }
