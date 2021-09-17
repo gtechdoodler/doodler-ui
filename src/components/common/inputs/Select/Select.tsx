@@ -64,6 +64,8 @@ const Select: React.FC<SelectProps> = (props) => {
   }
 
   const fireChangeEvent = (element: ReactElement) => {
+
+    // TODO: Just a cheap, immitation change event for now, to get something working.
     if (onChange) {
       onChange(element.props.value);
     }
