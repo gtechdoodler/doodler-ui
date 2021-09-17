@@ -7,6 +7,19 @@ import DownArrow from '@material-ui/icons/ArrowDropDown';
 
 import './Select.scss';
 
+// TODO:
+// My intention is to take a material-ui approach, of controlled vs uncontrolled
+// state with this component. For example, a client/dev of the component may want
+// to take the "React" state approach of "single source of true" to maintain selection
+// state in the component, or... this might not be necessary in some cases. It could
+// be that the dev just wants the component to manage it's own state, because they
+// simple want the selected id, in the change handler, and have no need to set state
+// outside of the component context. However, I haven't had time :). So, for now, the
+// component does both, and may well render twice if you do choose to set selected
+// state in a parent component. Not effecient, but I'm fully aware of it. Putting
+// this component together, was more about the 'design' principles and ensuring
+// the component is scalable from a customisation perspective.
+
 const Select: React.FC<SelectProps> = (props) => {
   const block = new BemIt('Select');
   const {
@@ -26,17 +39,13 @@ const Select: React.FC<SelectProps> = (props) => {
   const childrenArray = React.Children.toArray(props.children) as React.ReactChild[];
 
   useEffect(() => {
-    for (let i = 0; i < childrenArray.length; i++) {
-      const child = childrenArray[i];
+    childrenArray?.find((child) => {
       if (React.isValidElement(child)) {
-        if (child.props.selected) {
-          setSelectedStates(child);
-          break;
-        }
+        if (child.props.selected) return child;
       }
-    }
+    });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [props.children]);
 
   useEffect(() => {
     if (showOptions) {
